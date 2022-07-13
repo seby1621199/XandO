@@ -6,25 +6,32 @@
         xmlns:local="clr-namespace:Xand0"
         mc:Ignorable="d"
         Title="Menu" Height="450" Width="300" Background="{x:Null}">
-    <Border CornerRadius="10" Background="#FFFC2525">
-        <Grid Background="#FF546D75">
+    <Border BorderThickness="0,0,0,0" CornerRadius="10">
+        <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFBFF0DE" Offset="0.116"/>
+                <GradientStop Color="#FFA8DADC" Offset="0.002"/>
+                <GradientStop Color="#FF1D3557" Offset="0.984"/>
+                <GradientStop Color="#FF75A9BB" Offset="0.318"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid >
             <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="X &amp; O" VerticalAlignment="Top" Margin="0,30,0,0" FontFamily="Baskerville Old Face" FontSize="36" FontWeight="Bold">
                 <TextBlock.Foreground>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF02020C" Offset="0.005"/>
-                        <GradientStop Color="#FF331850" Offset="0.705"/>
-                        <GradientStop Color="#FF1B50C6" Offset="0.32"/>
+                        <GradientStop Color="#FF1C3881" Offset="0.002"/>
+                        <GradientStop Color="#FF335DC9" Offset="0.995"/>
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
             </TextBlock>
-            <Button Content="Player vs Player" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="White" BorderThickness="2,2,2,2" Foreground="White" FontSize="16" FontFamily="Mongolian Baiti" Click="Button_Click"/>
-            
+            <Button Content="Player vs Player" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FF8AD4D7" BorderThickness="2,2,2,2" Foreground="#FFF1FAEE" FontSize="16" FontFamily="Mongolian Baiti" Click="Button_Click" OpacityMask="#FFB15C5C"/>
+
             <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0" Height="160" Width="160">
-                <TextBlock TextWrapping="Wrap" Text="Score" FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="White" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="160"/>
-                <TextBlock TextWrapping="Wrap" Text="Player X: " FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="White" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80"/>
-                <TextBlock x:Name="player_x_score" TextWrapping="Wrap" FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="White" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80"/>
-                <TextBlock TextWrapping="Wrap" Text="Player O: " FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="White" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80"/>
-                <TextBlock x:Name="player_o_score" TextWrapping="Wrap" FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="White" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80"/>
+                <TextBlock TextWrapping="Wrap" Text="Score" FontFamily="Constantia" FontSize="21" FontWeight="DemiBold" Foreground="#FFF1FAEE" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="160" FontStretch="Normal"/>
+                <TextBlock TextWrapping="Wrap" Text="Player X: " FontFamily="Bahnschrift" FontSize="18" FontWeight="Normal" Foreground="#FFF1FAEE" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80"/>
+                <TextBlock x:Name="player_x_score" TextWrapping="Wrap" FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="#FF9FE0C2" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80" Text="0"/>
+                <TextBlock TextWrapping="Wrap" Text="Player O: " FontFamily="Bahnschrift" FontSize="18" FontWeight="Normal" Foreground="#FFF1FAEE" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80"/>
+                <TextBlock x:Name="player_o_score" TextWrapping="Wrap" FontFamily="Bahnschrift" FontSize="18" FontWeight="Bold" Foreground="#FF9FE0C2" LineStackingStrategy="MaxHeight" TextTrimming="None" TextAlignment="Center" Width="80" Text="0"/>
 
             </WrapPanel>
 

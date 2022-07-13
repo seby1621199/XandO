@@ -14,8 +14,6 @@ namespace Xand0
     {
         int nr = 0;
         Menu menu;
-        public String t = "dd";
-        //create variable game 
         Game game = new Game();
         public MainWindow()
         {
@@ -54,8 +52,6 @@ namespace Xand0
             imgo.Width = 100;
             int y = System.Windows.Controls.Grid.GetColumn(test);
             int x = System.Windows.Controls.Grid.GetRow(test);
-            //if (test.Children != null)
-            //    MessageBox.Show("nu poti aici");
             if (nr % 2 == 0 && game.check_empty(x, y))
             {
                 test.Children.Add(imgx);
@@ -77,21 +73,13 @@ namespace Xand0
             }
             if (game.win() == "x")
             {
-                if (menu.player_x_score.Text == "")
-                {
-                    menu.player_x_score.Text = "1";
-                    menu.player_o_score.Text = "0";
-                }
-                else
-                {
-                    menu.player_x_score.Text = (int.Parse(menu.player_x_score.Text) + 1).ToString();
-                }
-                //Menu.score("s");
+
+                menu.player_x_score.Text = (int.Parse(menu.player_x_score.Text) + 1).ToString();
+
                 nr = 0;
                 MessageBox.Show("X");
                 game.clear();
                 clear(_0and0);
-
                 clear(_0and0);
                 clear(_0and1);
                 clear(_0and2);
@@ -105,11 +93,13 @@ namespace Xand0
             }
             if (game.win() == "o")
             {
+
+                menu.player_o_score.Text = (int.Parse(menu.player_o_score.Text) + 1).ToString();
+
                 nr = 0;
                 MessageBox.Show("o");
                 game.clear();
                 clear(_0and0);
-
                 clear(_0and0);
                 clear(_0and1);
                 clear(_0and2);
@@ -127,7 +117,6 @@ namespace Xand0
                 MessageBox.Show("DRAW");
                 game.clear();
                 clear(_0and0);
-
                 clear(_0and0);
                 clear(_0and1);
                 clear(_0and2);
@@ -155,8 +144,8 @@ namespace Xand0
             var obj = (Grid)sender;
             int y = System.Windows.Controls.Grid.GetColumn(obj);
             int x = System.Windows.Controls.Grid.GetRow(obj);
-           if( game.check_empty(x, y))
-            obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF766868");
+            if (game.check_empty(x, y))
+                obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF766868");
 
         }
 

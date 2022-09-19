@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Xand0"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="MainWindow" Height="400" Width="400">
     <Grid x:Name="grid">
         <Grid.RowDefinitions>
@@ -20,16 +21,15 @@
 
         </Grid.ColumnDefinitions>
 
-        <Grid x:Name="_0and0" Grid.Row="0" Grid.Column="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave">
-        </Grid>
-        <Grid x:Name="_0and1" Grid.Row="0" Grid.Column="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_0and2" Grid.Row="0" Grid.Column="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_1and0" Grid.Row="1" Grid.Column="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_1and1" Grid.Row="1" Grid.Column="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_1and2" Grid.Row="1" Grid.Column="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_2and0" Grid.Row="2" Grid.Column="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_2and1" Grid.Row="2" Grid.Column="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
-        <Grid x:Name="_2and2" Grid.Row="2" Grid.Column="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF938383" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_0and0" Grid.Row="0" Grid.Column="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_0and1" Grid.Row="0" Grid.Column="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_0and2" Grid.Row="0" Grid.Column="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_1and0" Grid.Row="1" Grid.Column="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_1and1" Grid.Row="1" Grid.Column="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_1and2" Grid.Row="1" Grid.Column="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_2and0" Grid.Row="2" Grid.Column="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_2and1" Grid.Row="2" Grid.Column="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
+        <Grid x:Name="_2and2" Grid.Row="2" Grid.Column="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Background="#FF302F2F" Margin="2,2,2,2" Mouse.MouseEnter="MouseEnter" Mouse.MouseLeave="MouseLeave"/>
 
     </Grid>
 </Window>

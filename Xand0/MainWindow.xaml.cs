@@ -13,7 +13,7 @@ namespace Xand0
     public partial class MainWindow : Window
     {
         int nr = 0;
-        Menu menu;
+        StartMenu menu;
         Game game = new Game();
         public MainWindow()
         {
@@ -24,13 +24,13 @@ namespace Xand0
         {
             var obj = (Grid)sender;
             obj.Children.Clear();
-            obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF938383");
+            obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF302F2F");
 
         }
 
         public void get_menu(object sender)
         {
-            var obj = (Menu)sender;
+            var obj = (StartMenu)sender;
             menu = obj;
         }
 
@@ -38,23 +38,27 @@ namespace Xand0
         {
 
             var test = (Grid)sender;
-            test.Background = System.Windows.Media.Brushes.Wheat;
-            System.Windows.Controls.Image imgx = new System.Windows.Controls.Image();
-            System.Windows.Controls.Image imgo = new System.Windows.Controls.Image();
+            test.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF515050");
 
-            imgx.Source = new BitmapImage(new Uri(@"C:\Users\sysor\source\repos\Xand0\Xand0\x.jpg"));
-            imgo.Source = new BitmapImage(new Uri(@"C:\Users\sysor\source\repos\Xand0\Xand0\o.jpg"));
+            MaterialDesignThemes.Wpf.PackIcon iconX = new MaterialDesignThemes.Wpf.PackIcon();
+            iconX.Kind = MaterialDesignThemes.Wpf.PackIconKind.AlphaX;
+            iconX.VerticalAlignment = VerticalAlignment.Center;
+            iconX.HorizontalAlignment = HorizontalAlignment.Center;
+            iconX.Width = _0and0.Width;
+            iconX.Height = _0and0.Height;
 
-            imgx.Width = 100;
-            imgx.Height = 100;
-            imgx.Visibility = Visibility.Visible;
-            imgo.Height = 100;
-            imgo.Width = 100;
+            MaterialDesignThemes.Wpf.PackIcon iconO = new MaterialDesignThemes.Wpf.PackIcon();
+            iconO.Kind = MaterialDesignThemes.Wpf.PackIconKind.AlphaO;
+            iconO.VerticalAlignment = VerticalAlignment.Center;
+            iconO.HorizontalAlignment = HorizontalAlignment.Center;
+            iconO.Width = _0and0.Width;
+            iconO.Height = _0and0.Height;
+
             int y = System.Windows.Controls.Grid.GetColumn(test);
             int x = System.Windows.Controls.Grid.GetRow(test);
             if (nr % 2 == 0 && game.check_empty(x, y))
             {
-                test.Children.Add(imgx);
+                test.Children.Add(iconX);
                 {
                     game.add(nr, x, y);
                     nr++;
@@ -64,7 +68,7 @@ namespace Xand0
             {
                 if (game.check_empty(x, y))
                 {
-                    test.Children.Add(imgo);
+                    test.Children.Add(iconO);
 
                     game.add(nr, x, y);
                     nr++;
@@ -128,14 +132,6 @@ namespace Xand0
                 clear(_2and2);
                 clear(_2and2);
             }
-
-
-
-
-
-
-
-
         }
 
         private new void MouseEnter(object sender, MouseEventArgs e)
@@ -145,7 +141,7 @@ namespace Xand0
             int y = System.Windows.Controls.Grid.GetColumn(obj);
             int x = System.Windows.Controls.Grid.GetRow(obj);
             if (game.check_empty(x, y))
-                obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF766868");
+                obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF201E1E");
 
         }
 
@@ -155,7 +151,7 @@ namespace Xand0
             int y = System.Windows.Controls.Grid.GetColumn(obj);
             int x = System.Windows.Controls.Grid.GetRow(obj);
             if (game.check_empty(x, y))
-                obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF938383");
+                obj.Background = (SolidColorBrush)new BrushConverter().ConvertFromString("#FF302F2F");
 
         }
     }

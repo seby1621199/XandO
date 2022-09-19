@@ -2,8 +2,6 @@
 {
     internal class Game
     {
-        public string test = "ddd";
-        
        private Coord[] arr = new Coord[10];
         public void add(int nr, int x, int y)
         {
@@ -36,6 +34,7 @@
             }
             return "none";
         }
+        
         public bool check_empty(int x, int y)
         {
             if (arr[x * 3 + y + 1].player ==null)

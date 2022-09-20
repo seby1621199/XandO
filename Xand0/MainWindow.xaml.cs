@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -81,7 +82,7 @@ namespace Xand0
                 menu.player_x_score.Text = (int.Parse(menu.player_x_score.Text) + 1).ToString();
 
                 nr = 0;
-                MessageBox.Show("X");
+                MessageBox.Show("X","Winner");
                 game.clear();
                 clear(_0and0);
                 clear(_0and0);
@@ -97,11 +98,10 @@ namespace Xand0
             }
             if (game.win() == "o")
             {
-
                 menu.player_o_score.Text = (int.Parse(menu.player_o_score.Text) + 1).ToString();
 
                 nr = 0;
-                MessageBox.Show("o");
+                MessageBox.Show("O","Winner");
                 game.clear();
                 clear(_0and0);
                 clear(_0and0);
@@ -118,7 +118,7 @@ namespace Xand0
             if (nr == 9 && game.win() != "x" && game.win() != "o")
             {
                 nr = 0;
-                MessageBox.Show("DRAW");
+                MessageBox.Show("DRAW", "We have a draw");
                 game.clear();
                 clear(_0and0);
                 clear(_0and0);
